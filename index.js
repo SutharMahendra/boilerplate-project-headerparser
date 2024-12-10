@@ -24,6 +24,25 @@ app.get('/api/hello', function (req, res) {
   res.json({ greeting: 'hello API' });
 });
 
+/**
+ * in Request Header Parser Microservice
+ * get the IP address from the req.ip 
+ * get the language from req.headers['accept-language']
+ * get the software from req.headers['useragent']
+ */
+
+app.get('/api/whoami/', (req, res) => {
+  // const ipaddress = req.headers['x-forwarded-for'] || req.ip;
+  // console.log("first");
+  // const language = req.headers['accept-language'];
+  // console.log("second");
+  // const software = req.headers['user-agent'];
+  // console.log("third");
+
+  res.json({ ipaddress: req.ip, language: req.headers['accept-language'], software: req.headers['user-agent'] });
+
+})
+
 // listen for requests :)
 var listener = app.listen(process.env.PORT || 3000, function () {
   console.log('Your app is listening on port ' + listener.address().port);
