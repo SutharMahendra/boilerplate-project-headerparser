@@ -4,7 +4,8 @@ A simple microservice that parses the request header and sends back a JSON objec
 
 This project is my solution for APIs and Microservices Projects - Request Header Parser Microservice and it's a part of APIs and Microservices Certification by freeCodeCamp.
 
-Requirements
+Requirements:
+
 ✅ A request to /api/whoami should return a JSON object with your IP address in the ipaddress key.
 
 ✅ A request to /api/whoami should return a JSON object with your preferred language in the language key.
